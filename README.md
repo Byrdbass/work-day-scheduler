@@ -9,3 +9,4 @@ using jQuery is easier to manipulate the DOM
 ## Experimenting
 -tried using a jQuery sortable list but took to long to load
 -had trouble with custom HTML elements in a `<ul>`, so i started deleting classes to see what bootstrap was displaying or not.
+-realized that bootstrap was causing the class `lead` to display limited information
