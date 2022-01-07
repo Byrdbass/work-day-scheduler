@@ -1,7 +1,13 @@
 //link the current day in with html class "currentDay"
 var exactCurrentDateTime = moment().format("dddd, MMMM Do YYYY, h:mm:ss a")
 console.log(exactCurrentDateTime);
-exactCurrentDateTime = $('#10am');
+//experimenting with id class matching current time
+var presentTimeSlot = $('#10am'); //will need to replace the current element with moment.js function
+console.log(presentTimeSlot);
+console.log(document.styleSheets[3]);
+//create an array of id's for each time slot
+// presentTimeSlot.cssHooks(".present");
+//if presentTimeSlot is matching exactCurrentDateTime display the CSS property for present
 
 //create a variable for the HTML element that will display the current Date and Time
     //COULD WE CHANGE THE STYLING ON THIS TO GIVE MORE OF A SPACE BEFORE THE FOLLOWING CODE???
