@@ -32,12 +32,19 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <!-- add the current day -->
-      <p id="currentDay" class="lead"></p>
+      <p id="Today" class="lead"></p>
     </header>
+    <!-- MAIN PORTION OF THE PLANNER -->
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="time-block hour row" >9am</div>
-        <div class="description" ></div>
+      <div class="time-block hour row" >9am
+        <div class="container description">
+          <input type="text">
+        </div>
+        <button class="saveBtn">save!</button>
+      </div>
+        
+          
       <div class="time-block hour row">10am</div>
       <div class="time-block hour row">11am</div>
       <div class="time-block hour row">12pm</div>
@@ -46,8 +53,7 @@
       <div class="time-block hour row">3pm</div>
       <div class="time-block hour row">4pm</div>
       <div class="time-block hour row">5pm</div>
-      <!-- Create a container that will flex all the current hourly time blocks for each day -->
-      <div class="container">
+
         
       </div>
     </div>

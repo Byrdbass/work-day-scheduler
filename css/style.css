@@ -20,11 +20,15 @@ body {
     border-radius: 0;
     border-bottom: 10px solid black;
   }
-  /* create a class for the day displayed in the planner */
-  /* make it display as a box with a border and padding and a margin */
+ 
   
   .description {
     white-space: pre-wrap;
+    display: block;
+    border: 1px solid #000000;
+    /* padding: 0px 500px 0px 10px; */
+    margin: 0px 75px 0px 50px;
+    text-align: start;
   }
   
   .time-block {
@@ -65,6 +69,7 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06aed5;
     color: white;
+    justify-content: flex-end;
   }
   
   .saveBtn i:hover {
