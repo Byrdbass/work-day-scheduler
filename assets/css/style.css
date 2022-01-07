@@ -20,20 +20,20 @@ body {
     border-radius: 0;
     border-bottom: 10px solid black;
   }
- 
-  
+
   .description {
     white-space: pre-wrap;
-    display: block;
+    /* display: block;
     border: 1px solid #000000;
-    /* padding: 0px 500px 0px 10px; */
+    padding: 0px 500px 0px 10px;
     margin: 0px 75px 0px 50px;
     text-align: start;
+   */
   }
-  
   .time-block {
     text-align: center;
     border-radius: 15px;
+   /* z-index: 1; */
   }
   
   .row {
@@ -65,14 +65,23 @@ body {
   
   .saveBtn {
     border-left: 1px solid black;
+    margin-left: 2px;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #06aed5;
     color: white;
-    justify-content: flex-end;
+    /* float: right; */
   }
   
   .saveBtn i:hover {
     font-size: 20px;
     transition: all 0.3s ease-in-out;
+  }
+  .eventInput {
+    z-index: 1;
+    border: none;
+    /* padding: 0px 500px 0px 10px; */
+    margin: 1px 0px 2px 10px;
+    width: 85%;
+    display: block;
   }

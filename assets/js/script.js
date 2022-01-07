@@ -1,6 +1,8 @@
 //link the current day in with html class "currentDay"
-var currentDateTime = moment().format("dddd, MMMM Do YYYY, h:mm:ss a")
-console.log(currentDateTime);
+var exactCurrentDateTime = moment().format("dddd, MMMM Do YYYY, h:mm:ss a")
+console.log(exactCurrentDateTime);
+exactCurrentDateTime = $('#10am');
+
 //create a variable for the HTML element that will display the current Date and Time
     //COULD WE CHANGE THE STYLING ON THIS TO GIVE MORE OF A SPACE BEFORE THE FOLLOWING CODE???
 var displayCurrentDateTime = $('#Today')
@@ -12,8 +14,8 @@ displayCurrentDateTime.text(currentDay);
 //create a series of hourly time blocks from 9am to 5pm - 8 hours
 var workDay = 8
 //find a way to display all of the hourly time blocks for the work day
-var typeDescription = $('.description')
-typeDescription.text("blah")
+// var typeDescription = $('.description')
+// typeDescription.text("blah")
 //we may have to use 3 classes (.time-block, .row, and .hour) for each hour frm 9am to 5pm
     //we will need to add the 4th class (of either .past, .present, or .future) to these existing 3
 // create a arguement within moment.js that calculates the present hour + or - the time of day between 9am and 5pm

@@ -23,7 +23,7 @@
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css"/>
     <link rel="stylesheet" href="/resources/demos/style.css"/> -->
     <!-- original style link -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -37,15 +37,12 @@
     <!-- MAIN PORTION OF THE PLANNER -->
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="time-block hour row" >9am
-        <div class="container description">
-          <input type="text">
-        </div>
-        <button class="saveBtn">save!</button>
+      <div class="container time-block hour row">9am
+        <input class="eventInput" type="text" placeholder="type event here">
+        <button class="row saveBtn">save!</button>
+        <div class="description"></div>
       </div>
-        
-          
-      <div class="time-block hour row">10am</div>
+      <div class="time-block hour row" id="10am">10am</div>
       <div class="time-block hour row">11am</div>
       <div class="time-block hour row">12pm</div>
       <div class="time-block hour row">1pm</div>
@@ -67,6 +64,6 @@
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script> -->
 <!-- linking the local js -->
-    <script src= "js/script.js"></script>
+    <script src= "./assets/js/script.js"></script>
   </body>
 </html>

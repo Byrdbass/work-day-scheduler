@@ -10,6 +10,7 @@ using jQuery is easier to manipulate the DOM
 -tried using a jQuery sortable list but took to long to load
 -had trouble with custom HTML elements in a `<ul>`, so i started deleting classes to see what bootstrap was displaying or not.
 -realized that bootstrap was causing the class `lead` to display limited information
+-I will plan on creating an id for each time block that will compare to the moment in `var = exactCurrentDateTime`, if it matches then the class `.present` will display the appropriate color
 
 ## Execution and class via bootstrap
-I found that the hour displayed will need to hour and row and time-block classes will need to be placed together, and the description within each `<div>`.
+I found that the hour displayed will need to .`hour` and `.row` and `.time-block` classes will need to be placed together, and the `.description` within each `<div>`.
