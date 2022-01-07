@@ -2,8 +2,13 @@
 var exactCurrentDateTime = moment().format("dddd, MMMM Do YYYY, h:mm:ss a")
 console.log(exactCurrentDateTime);
 //experimenting with id class matching current time
+var pastTimeSlot = $('9am')
+pastTimeSlot.className
 var presentTimeSlot = $('#10am'); //will need to replace the current element with moment.js function
 console.log(presentTimeSlot);
+presentTimeSlot.className = ".present";
+console.log(presentTimeSlot.className)
+//I am traversing the document to see if i am able to view the CSS in the console for property
 console.log(document.styleSheets[3]);
 //create an array of id's for each time slot
 // presentTimeSlot.cssHooks(".present");
