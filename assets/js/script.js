@@ -1,3 +1,19 @@
+$(document).ready(function () {
+    $('.saveBtn').on('click', function () {
+        console.log(this);
+        var inputText = $(this).siblings(".description").val();
+        var inputTime = $(this).parent().attr('id');
+        localStorage.setItem(inputText, inputTime);
+    })
+    $('#9am .description').val(localStorage.getItem("9am"));
+    $('#10am .description').val(localStorage.getItem("10am"));
+    $('#11am .description').val(localStorage.getItem("11am"));
+    $('#12pm .description').val(localStorage.getItem("12pm"));
+    $('#13pm .description').val(localStorage.getItem("13pm"));
+    $('#14pm .description').val(localStorage.getItem("14pm"));
+    $('#15pm .description').val(localStorage.getItem("15pm"));
+    $('#16pm .description').val(localStorage.getItem("16pm"));
+    $('#17pm .description').val(localStorage.getItem("17pm"));
 //link the current day in with html class "currentDay"
 var exactCurrentDateTime = moment().format('dddd, MMMM Do YYYY, hh:mm:ss a')
 console.log("The exact current time is " + exactCurrentDateTime)
@@ -22,7 +38,8 @@ var nineAM = moment([2022, 0, 8, 9, 0, 0]).from(moment())
 console.log(nineAM);
 var fivePM = moment([2022, 0, 8, 17, 0, 0]).from(moment())
 console.log(fivePM);
-//
+//create a function that will save things to local storage when save button is clicked
+
 
 
 //create a series of hourly time blocks from 9am to 5pm - 8 hours
@@ -52,7 +69,7 @@ in if statement(i.e. 10am to just 10) */
     })
 }
 checkPresentTimeSlot();
-
+})
 
 //we may have to use 3 classes (.time-block, .row, and .hour) for each hour frm 9am to 5pm
     //we will need to add the 4th class (of either .past, .present, or .future) to these existing 3
