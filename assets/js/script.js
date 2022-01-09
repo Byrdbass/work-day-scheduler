@@ -22,11 +22,10 @@ var nineAM = moment([2022, 0, 8, 9, 0, 0]).from(moment())
 console.log(nineAM);
 var fivePM = moment([2022, 0, 8, 17, 0, 0]).from(moment())
 console.log(fivePM);
-
+//
 
 
 //create a series of hourly time blocks from 9am to 5pm - 8 hours
-
 function checkPresentTimeSlot () {
 //jQuery version of a for loop for class "time-block"
     $(".time-block").each(function () {
