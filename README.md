@@ -10,7 +10,41 @@ using jQuery is easier to manipulate the DOM
 -tried using a jQuery sortable list but took to long to load
 -had trouble with custom HTML elements in a `<ul>`, so i started deleting classes to see what bootstrap was displaying or not.
 -realized that bootstrap was causing the class `lead` to display limited information
--I will plan on creating an id for each time block that will compare to the moment in `var = exactCurrentDateTime`, if it matches then the class `.present` will display the appropriate color
+-I will plan on creating an id for each time block that will compare to the moment in `var = exactCurrentDateTime`, if it matches then the class `.present` will display the appropriate color.  
+-This was code in the javascript: 
+`console.log("the Previous time is " + previousTime + " hours") console.log("the future time is " + futureTime + " hours");`
+-experimenting with id class matching current time
+Need to get id's to match up with current hour
+`var pastTimeSlot = $("#9am"); console.log("the past time slots are " + pastTimeSlot); pastTimeSlot.addClass("past"); var presentTimeSlot = $('#10am');` 
+will need to replace the current element with moment.js function
+`console.log("the current time slot is " + presentTimeSlot);`
+if presentTimeSlot is matching `exactCurrentDateTime` display the CSS property for present
+`presentTimeSlot.addClass("present");
+var futureTimeSlot = $('#11am');
+futureTimeSlot.addClass("future");
+console.log("The Future time slots are " + futureTimeSlot);`
+I am traversing the document to see if i am able to view the CSS in the console for property
+`console.log(document.styleSheets[3]);`
+create an array of id's for each time slot
+`presentTimeSlot.cssHooks(".present");`
+    
+    `
+if (currentHour > 17) {
+    var previousTime = currentHour - minimumTime
+    //all is previous time on the planner
+} else {
+    previousTime = null;
+}
+if (currentHour < 9) {
+    var futureTime = currentHour - maximumTime
+    //all is future time on the planner
+} else {
+    futureTime = null;
+}`
+
+    find a way to get the input tag to display text
+    `var typeDescription = $('.description')
+    typeDescription.text("blah")`
 
 ## Execution and class via bootstrap
 I found that the hour displayed will need to .`hour` and `.row` and `.time-block` classes will need to be placed together, and the `.description` within each `<div>`.
