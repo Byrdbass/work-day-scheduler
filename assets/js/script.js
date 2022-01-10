@@ -1,19 +1,3 @@
-$(document).ready(function () {
-    $('.saveBtn').on('click', function () {
-        console.log(this);
-        var inputText = $(this).siblings(".description").val();
-        var inputTime = $(this).parent().attr('id');
-        localStorage.setItem(inputText, inputTime);
-    })
-    $('#9am .description').val(localStorage.getItem("9am"));
-    $('#10am .description').val(localStorage.getItem("10am"));
-    $('#11am .description').val(localStorage.getItem("11am"));
-    $('#12pm .description').val(localStorage.getItem("12pm"));
-    $('#13pm .description').val(localStorage.getItem("13pm"));
-    $('#14pm .description').val(localStorage.getItem("14pm"));
-    $('#15pm .description').val(localStorage.getItem("15pm"));
-    $('#16pm .description').val(localStorage.getItem("16pm"));
-    $('#17pm .description').val(localStorage.getItem("17pm"));
 //link the current day in with html class "currentDay"
 var exactCurrentDateTime = moment().format('dddd, MMMM Do YYYY, hh:mm:ss a')
 console.log("The exact current time is " + exactCurrentDateTime)
@@ -69,8 +53,21 @@ in if statement(i.e. 10am to just 10) */
     })
 }
 checkPresentTimeSlot();
+$('.saveBtn').on('click', function () {
+    console.log(this);
+    var inputText = $(this).siblings(".description").val();
+    var inputTime = $(this).parent().attr('id');
+    localStorage.setItem(inputTime, inputText);
 })
-
+$('#9am .description').val(localStorage.getItem("9am"));
+$('#10am .description').val(localStorage.getItem("10am"));
+$('#11am .description').val(localStorage.getItem("11am"));
+$('#12pm .description').val(localStorage.getItem("12pm"));
+$('#13pm .description').val(localStorage.getItem("13pm"));
+$('#14pm .description').val(localStorage.getItem("14pm"));
+$('#15pm .description').val(localStorage.getItem("15pm"));
+$('#16pm .description').val(localStorage.getItem("16pm"));
+$('#17pm .description').val(localStorage.getItem("17pm"));
 //we may have to use 3 classes (.time-block, .row, and .hour) for each hour frm 9am to 5pm
     //we will need to add the 4th class (of either .past, .present, or .future) to these existing 3
 // create a arguement within moment.js that calculates the present hour + or - the time of day between 9am and 5pm
